@@ -21,8 +21,9 @@ def generate_from_image(output_dir,
                         height,
                         width,
                         step,
-                        images_dname='images',
-                        labels_dname='labels'
+                        label_names,
+                        images_dname,
+                        labels_dname
                         ):
     H, W = image_list[0].shape;
     
@@ -47,7 +48,8 @@ def generate_from_image(output_dir,
             ## Generate label_block
             lbl_block = get_block_method_roi(out_label_list[n],i,j,height,width);
             
-            frel_lbl=os.path.join(labels_dname,dname+commom_name+'_lbl'+str(n)+'.npy');
+            base,ext = os.path.splitext(label_names[n]);
+            frel_lbl=os.path.join(labels_dname,dname+commom_name+'_'+base+'.npy');
             np.save(os.path.join(output_dir,frel_lbl),lbl_block);
             frel_lbl_list[n].append(frel_lbl);
     
@@ -57,8 +59,10 @@ def generate(   output_dir,
                 input_images_dir,
                 input_labels_dir,
                 dname,
-                image_names=['Red.bmp','Green.bmp','Blue.bmp','Nir.bmp','RedEdge.bmp'],
-                label_names=['label.bmp','map.bmp'],
+                image_names,
+                label_names,
+                images_dname,
+                labels_dname,
                 separate=True,
                 height=224, # height
                 width=224,  # width
@@ -102,6 +106,10 @@ def generate(   output_dir,
                                                     out_label_list,
                                                     height,
                                                     width,
-                                                    step);
+                                                    step,
+                                                    label_names,
+                                                    images_dname,
+                                                    labels_dname
+                                                    );
     
     return frel_img_list,frel_lbl_list;

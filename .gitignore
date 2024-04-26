@@ -2,3 +2,4 @@
 /src/*.pyc
 /output/images/*.npy
 /output/labels/*.npy
+/output/bushes.csv
