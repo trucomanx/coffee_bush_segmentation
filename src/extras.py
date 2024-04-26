@@ -96,4 +96,12 @@ def generate(   output_dir,
             label_list.append(img);
         out_label_list.append(label_list)
     
-    generate_from_image(output_dir,dname,image_list,out_label_list,height,width,step);
+    frel_img_list,frel_lbl_list=generate_from_image(output_dir,
+                                                    dname,
+                                                    image_list,
+                                                    out_label_list,
+                                                    height,
+                                                    width,
+                                                    step);
+    
+    return frel_img_list,frel_lbl_list;
