@@ -3,4 +3,5 @@
 /output/images/*.npy
 /output/labels/*.npy
 /output/bushes.csv
-/output/mask.csv
+/output/map.csv
+/example/__pycache__

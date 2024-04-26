@@ -13,8 +13,8 @@ label_names=['bushes.bmp','map.bmp'];
 images_dname='images';
 labels_dname='labels';
 
-height=224;
-width=224;
+height=128;
+width=128;
 step=16;
 
 
