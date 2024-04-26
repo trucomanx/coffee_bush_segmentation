@@ -3,3 +3,4 @@
 /output/images/*.npy
 /output/labels/*.npy
 /output/bushes.csv
+/output/mask.csv
