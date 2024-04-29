@@ -61,5 +61,5 @@ generate_dataset(   input_base_dir='../input/1-preprocessed/train',
                     labels_dname='labels',
                     height=128,
                     width=128,
-                    step=32
+                    step=16
                     )

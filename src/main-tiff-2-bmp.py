@@ -34,7 +34,7 @@ def tiff_to_bmp(archivo_tiff,output,image_names=['Red.bmp','Green.bmp','Blue.bmp
 
 
 archivo_tiff = '../input/0-raw/bgrne_23.tiff';
-output='../input/1-preprocessed/train/images/2';
+output='../input/1-preprocessed/train/images/1';
 
 tiff_to_bmp(archivo_tiff,output);
 
