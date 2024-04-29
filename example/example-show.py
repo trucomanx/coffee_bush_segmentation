@@ -1,8 +1,8 @@
 import numpy as np
 
-#imagem = np.load('../output/images/1_16_176.npy')
-imagem = np.load('../output/labels/1_16_176_bushes.npy')
-#imagem = np.load('../output/labels/1_16_176_map.npy')
+#imagem = np.load('../output/train/images/1_0_320.npy')
+imagem = np.load('../output/train/labels/1_0_320_bushes.npy')
+#imagem = np.load('../output/train/labels/1_16_176_map.npy')
 
 
 import cv2
